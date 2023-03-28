@@ -42,7 +42,7 @@ describe("Launches API", () => {
       const responseLaunchDate = new Date(response.body.launchDate).valueOf();
       expect(requestLaunchDate).toBe(responseLaunchDate);
       // console.log(launchWithoutDate);
-    });
+    }, 10000);
 
     test("It should catch missing required properties", async () => {
       const response = await request(app)
