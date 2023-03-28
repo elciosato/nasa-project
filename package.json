@@ -6,8 +6,9 @@
   "scripts": {
     "server": "npm --prefix server run dev",
     "client": "npm --prefix client start",
+    "install": "npm install --prefix client && npm install --prefix server",
     "watch": "npm run server & npm run client",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test --prefix server && npm run test --prefix server"
   },
   "keywords": [],
   "author": "",
